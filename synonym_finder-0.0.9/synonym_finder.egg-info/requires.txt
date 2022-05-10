@@ -1,5 +1,0 @@
-pywikibot
-SPARQLWrapper
-nltk
-sentence_transformers
-joblib
