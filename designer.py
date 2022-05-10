@@ -5,10 +5,15 @@ dwg.add(dwg.line((0, 0), (10, 0), stroke=svgwrite.rgb(10, 10, 16, '%')))
 dwg.add(dwg.text('Test', insert=(0, 0.2), fill='red'))
 dwg.save()
 
-class Drawing():
+class Designer():
 
-    def __init__(self, title):
+    def __init__(self) -> None:
+        self.CompositionalStrategy = None
 
-        self.title = title
         
 
+def main():
+    pass
+
+if __name__ == '__main__':
+    main()
