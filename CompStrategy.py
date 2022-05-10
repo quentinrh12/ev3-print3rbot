@@ -4,6 +4,8 @@ class CompositionalStrategy():
 
     def __init__(self) -> None:
 
+        self.ruleOfThirds = []
+
         self.correlatedWords = []
         self.secondaryCompStrategy = None
     
