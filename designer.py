@@ -1,13 +1,3 @@
-import svgwrite
-from synonym_finder import *
-import pylexicon.core as lex
-
-sf = synonym_finder(bert_model = 'nli-bert-large')
-
-dwg = svgwrite.Drawing('test.svg', profile='tiny')
-dwg.add(dwg.line((0, 0), (10, 0), stroke=svgwrite.rgb(10, 10, 16, '%')))
-dwg.add(dwg.text('Test', insert=(0, 0.2), fill='red'))
-dwg.save()
 
 class Designer():
 
@@ -37,8 +27,8 @@ def analyzeReponse(wordsString):
     print(wordList)
 
     for word in wordList:
-        synonyms = sf.get_synonyms(word)
-        print(word + " synonyms: " + synonyms)
+        print(word + " synonyms: ")
+        
     
 
 if __name__ == '__main__':
