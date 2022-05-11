@@ -1,3 +1,4 @@
+from nltk.corpus import wordnet as wn
 
 class Designer():
 
@@ -28,8 +29,18 @@ def analyzeReponse(wordsString):
 
     for word in wordList:
         print(word + " synonyms: ")
-        
-    
+        synonyms = []
+        syns = wn.synsets(word, pos=wn.ADJ)
+        print(syns)
+        for syn in syns:
+            for lm in syn.lemmas():
+                if lm.name() == word:
+                    pass
+                else:
+                    synonyms.append(lm.name())
+                    print("\t--> " + lm.name())    
 
 if __name__ == '__main__':
     main()
+
+
